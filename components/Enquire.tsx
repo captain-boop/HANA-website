@@ -1,5 +1,4 @@
-// Wire this to your real charter desk before launch.
-const ENQUIRY_EMAIL = "charter@example.com";
+const ENQUIRY_EMAIL = "captain@myhana.com";
 
 export default function Enquire() {
   const href =
