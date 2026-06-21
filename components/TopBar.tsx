@@ -1,4 +1,6 @@
 import Image from "next/image";
+import InstagramIcon from "@/components/icons/Instagram";
+import { INSTAGRAM_URL } from "@/lib/social";
 
 export default function TopBar() {
   return (
@@ -14,14 +16,26 @@ export default function TopBar() {
         />
       </a>
       <nav>
-        <a className="nav-hide" href="#vessel">
-          The Vessel
-        </a>
         <a className="nav-hide" href="#onboard">
           On Board
         </a>
+        <a className="nav-hide" href="#destinations">
+          Destinations
+        </a>
         <a className="nav-hide" href="#gallery">
           Gallery
+        </a>
+        <a className="nav-hide" href="#crew">
+          Crew
+        </a>
+        <a
+          className="nav-ig"
+          href={INSTAGRAM_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="HANA on Instagram"
+        >
+          <InstagramIcon />
         </a>
         <a className="nav-cta" href="#enquire">
           Enquire

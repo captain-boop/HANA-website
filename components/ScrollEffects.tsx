@@ -16,6 +16,16 @@ export default function ScrollEffects() {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const bar = document.getElementById("topbar");
 
+    // Respect reduced motion: freeze the hero video on its poster frame.
+    if (reduce) {
+      document
+        .querySelectorAll<HTMLVideoElement>("video.hero-video")
+        .forEach((v) => {
+          v.autoplay = false;
+          v.pause();
+        });
+    }
+
     const onScroll = () => {
       if (!bar) return;
       bar.classList.toggle("condensed", window.scrollY > 60);
