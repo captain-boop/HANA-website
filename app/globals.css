@@ -237,6 +237,10 @@ em{font-style:italic; color:var(--ink)}
 .vessel .body{margin:2.2rem auto 0; font-size:1rem}
 
 /* ---------- On board — alternating cards ---------- */
+.onboard-head{
+  text-align:center; display:block;
+  font-size:.92rem; letter-spacing:.34em; margin-bottom:1.4rem;
+}
 .onboard .row{
   display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(20px,3vw,40px);
   align-items:stretch; margin-bottom:clamp(20px,3vw,40px);
