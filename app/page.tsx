@@ -8,6 +8,7 @@ import Destinations from "@/components/Destinations";
 import Toys from "@/components/Toys";
 import Gallery from "@/components/Gallery";
 import Crew from "@/components/Crew";
+import Galley from "@/components/Galley";
 import Social from "@/components/Social";
 import Specs from "@/components/Specs";
 import Enquire from "@/components/Enquire";
@@ -28,6 +29,7 @@ export default function Home() {
         <Toys />
         <Gallery />
         <Crew />
+        <Galley />
         <Social />
         <Specs />
         <Enquire />

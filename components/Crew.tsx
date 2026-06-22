@@ -181,6 +181,23 @@ export default function Crew() {
           </p>
         </div>
 
+        <figure className="captain-note reveal">
+          <blockquote>
+            We&rsquo;ve both been aboard HANA for several years now, and we share
+            her command on rotation. She&rsquo;s a yacht we know intimately and
+            care about deeply, and that shows in how she&rsquo;s run &mdash;
+            whoever&rsquo;s at the helm, you&rsquo;re in experienced, familiar
+            hands. Our crew is the constant that makes every charter feel
+            seamless, and it would be our pleasure to welcome you aboard.
+          </blockquote>
+          <figcaption>
+            <span className="captain-note-name">
+              Captains Lars Viljoen &amp; Ryan Sandwith
+            </span>
+            <span className="captain-note-role">Masters · HANA</span>
+          </figcaption>
+        </figure>
+
         <div className="crew-grid">
           {CREW.map((m) => (
             <article className="crew-card reveal" key={m.name}>

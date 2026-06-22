@@ -15,9 +15,14 @@ export default function Enquire() {
             From €150,000 <span>per week</span>
           </div>
           <p className="area">Mediterranean · Summer &amp; Winter seasons</p>
-          <a className="btn" href={href}>
-            Enquire about HANA
-          </a>
+          <div className="enquire-actions">
+            <a className="btn" href={href}>
+              Enquire about HANA
+            </a>
+            <a className="btn btn-ghost" href="/hana-brochure.pdf" download>
+              Download Brochure
+            </a>
+          </div>
         </div>
       </div>
     </section>

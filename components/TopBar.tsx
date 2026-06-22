@@ -29,6 +29,12 @@ export default function TopBar() {
         <a className="nav-hide" href="#crew">
           Crew
         </a>
+        <a className="nav-hide" href="#galley">
+          Chef
+        </a>
+        <a className="nav-hide" href="/hana-brochure.pdf" download>
+          Brochure
+        </a>
         <a
           className="nav-ig"
           href={INSTAGRAM_URL}
