@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import SpecsStrip from "@/components/SpecsStrip";
 import Vessel from "@/components/Vessel";
 import OnBoard from "@/components/OnBoard";
+import Accommodation from "@/components/Accommodation";
 import Destinations from "@/components/Destinations";
 import Toys from "@/components/Toys";
 import Gallery from "@/components/Gallery";
@@ -25,6 +26,7 @@ export default function Home() {
         <SpecsStrip />
         <Vessel />
         <OnBoard />
+        <Accommodation />
         <Destinations />
         <Toys />
         <Gallery />

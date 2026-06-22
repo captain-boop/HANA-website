@@ -379,6 +379,65 @@ em{font-style:italic; color:var(--ink)}
 }
 @media(max-width:420px){ .toys-list{grid-template-columns:1fr} }
 
+/* ---------- Accommodation (cabins) ---------- */
+.acc-head{text-align:center; margin-bottom:clamp(2rem,3.4vw,3rem)}
+.acc-head h2{margin:.2rem 0 1rem}
+.acc-head .sub{color:var(--ink-soft); margin:0 auto; max-width:60ch}
+.acc-summary{
+  list-style:none; margin:1.8rem auto 0; padding:0; max-width:760px;
+  display:flex; flex-wrap:wrap; justify-content:center; gap:.6rem 1.4rem;
+}
+.acc-summary li{
+  display:flex; align-items:baseline; gap:.45rem;
+  font-size:.78rem; text-transform:uppercase; letter-spacing:.14em;
+  color:var(--ink-soft);
+}
+.acc-summary strong{
+  font-family:var(--font-display); font-weight:300; font-size:1.5rem;
+  letter-spacing:0; color:var(--champagne); text-transform:none;
+}
+.acc-master{
+  display:grid; grid-template-columns:1.4fr 1fr; gap:0;
+  border-radius:24px; overflow:hidden; border:1px solid var(--glass-line);
+  box-shadow:var(--shadow); margin-bottom:clamp(16px,2.4vw,28px);
+  background:rgba(255,255,255,.34);
+  -webkit-backdrop-filter:blur(24px) saturate(150%);
+  backdrop-filter:blur(24px) saturate(150%);
+}
+.acc-master-img{position:relative; min-height:340px}
+.acc-master-img img{object-fit:cover}
+.acc-master-body{padding:clamp(26px,3.2vw,44px); display:flex; flex-direction:column; justify-content:center}
+.acc-master-body h3{margin:.5rem 0 .9rem}
+.acc-master-body p{font-size:.98rem; color:var(--ink-soft)}
+.acc-type{
+  font-size:.7rem; text-transform:uppercase; letter-spacing:.2em;
+  color:var(--champagne);
+}
+.acc-grid{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(14px,2vw,24px);
+}
+.acc-card{
+  background:rgba(255,255,255,.34);
+  -webkit-backdrop-filter:blur(24px) saturate(150%);
+  backdrop-filter:blur(24px) saturate(150%);
+  border:1px solid var(--glass-line); border-radius:20px; overflow:hidden;
+  box-shadow:var(--shadow); display:flex; flex-direction:column;
+}
+.acc-card-img{position:relative; aspect-ratio:4/3}
+.acc-card-img img{object-fit:cover}
+.acc-card-body{padding:clamp(16px,1.8vw,22px); display:flex; flex-direction:column; flex:1}
+.acc-card-body h4{
+  font-family:var(--font-display); font-weight:300; font-size:1.3rem;
+  line-height:1.1; margin:.35rem 0 .5rem;
+}
+.acc-card-body p{font-size:.86rem; color:var(--ink-soft); line-height:1.5}
+@media(max-width:900px){ .acc-grid{grid-template-columns:repeat(2,1fr)} }
+@media(max-width:860px){
+  .acc-master{grid-template-columns:1fr}
+  .acc-master-img{min-height:280px}
+}
+@media(max-width:480px){ .acc-grid{grid-template-columns:1fr; max-width:420px; margin:0 auto} }
+
 /* ---------- Crew (profile grid) ---------- */
 .crew-head{text-align:center; margin-bottom:clamp(1.8rem,3vw,2.6rem)}
 .crew-head h2{margin-bottom:.7rem}

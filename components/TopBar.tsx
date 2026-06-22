@@ -20,6 +20,9 @@ export default function TopBar() {
         <a className="nav-hide" href="#onboard">
           On Board
         </a>
+        <a className="nav-hide" href="#accommodation">
+          Cabins
+        </a>
         <a className="nav-hide" href="#destinations">
           Destinations
         </a>

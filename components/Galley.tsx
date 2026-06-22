@@ -52,22 +52,21 @@ export default function Galley() {
             />
           </div>
           <div className="chef-panel">
-            {/* PLACEHOLDER — replace with the featured chef's real name and
-                background (training, previous vessels or restaurants). */}
-            <span className="chef-eyebrow">Your Chef</span>
-            <h3>Chef name</h3>
+            <span className="chef-eyebrow">Your Chefs</span>
+            <h3>Food is never off the clock</h3>
             <p className="chef-bg">
-              Culinary background — training, Michelin kitchens, previous yachts
-              or restaurants. Two to three sentences on where they cooked before
-              HANA and what shaped their food.
-            </p>
-            <p className="chef-philosophy">
-              Sourced from local markets each morning, always seasonal and
-              Mediterranean at heart — cooking that lets the produce speak.
+              Food aboard HANA is a genuine passion, not just a service. Our two
+              chefs are happiest sourcing the best of what&rsquo;s around &mdash;
+              foraging, seeking out natural produce, and building each day&rsquo;s
+              menus around what&rsquo;s freshest and most local. It&rsquo;s the
+              kind of care that comes from people who think about food even on
+              their days off, and it shows in every plate that leaves the galley.
             </p>
             <p className="chef-diet">
-              Vegetarian, vegan, pescatarian and allergen-aware menus are
-              prepared with the same care — simply let us know in advance.
+              Every menu is tailored to guests. Dietary requirements, allergies
+              and preferences are discussed before your charter and accommodated
+              throughout &mdash; from young children to specific lifestyle or
+              health needs.
             </p>
           </div>
         </div>
