@@ -163,10 +163,11 @@ em{font-style:italic; color:var(--ink)}
 .hero .eyebrow{margin-bottom:1.8rem; color:var(--champagne-2)}
 .hero-wordmark{
   width:min(560px,72vw); height:auto; display:block; margin:0 auto;
-  /* the logo is black; invert to oyster-white over the video */
-  filter:brightness(0) invert(1);
-  -webkit-filter:brightness(0) invert(1);
-  opacity:.96;
+  /* the logo is black; invert to a soft, warm oyster-white over the video
+     (a touch of sepia + reduced brightness takes the glare off pure white) */
+  filter:brightness(0) invert(1) brightness(.94) sepia(.10) saturate(1.05);
+  -webkit-filter:brightness(0) invert(1) brightness(.94) sepia(.10) saturate(1.05);
+  opacity:.88;
   text-shadow:0 2px 40px rgba(0,0,0,.4);
 }
 .keel{

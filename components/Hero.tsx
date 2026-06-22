@@ -12,7 +12,7 @@ export default function Hero() {
             muted
             loop
             playsInline
-            poster="/photos/Hana-5693-133-running-730740.webp"
+            poster="/photos/hana-hero-poster.jpg"
           >
             <source src="/hana-hero.mp4" type="video/mp4" />
           </video>
