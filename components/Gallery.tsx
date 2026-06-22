@@ -4,8 +4,8 @@ type Shot = { src: string; alt: string; className?: string };
 
 const SHOTS: Shot[] = [
   {
-    src: "/photos/Hana-5693-181-profile-733177.webp",
-    alt: "HANA under way off the coast, tenders and foilers in her wake",
+    src: "/photos/Hana-5693-155-saloon-730772.webp",
+    alt: "Main saloon in warm wood, soft seating framed by panoramic windows",
     className: "wide tall",
   },
   {
@@ -13,8 +13,8 @@ const SHOTS: Shot[] = [
     alt: "Main saloon with twin sofas and sea views",
   },
   {
-    src: "/photos/Hana-5693-146-deck-730759.webp",
-    alt: "Shaded sun loungers on deck",
+    src: "/photos/Hana-5693-169-twin-730786.webp",
+    alt: "Twin guest cabin in warm wood with portholes to the sea",
   },
   {
     src: "/photos/Hana-5693-162-master-730779.webp",
@@ -34,8 +34,8 @@ const SHOTS: Shot[] = [
     alt: "Upper saloon lounge",
   },
   {
-    src: "/photos/Hana-5693-152-platform-730769.webp",
-    alt: "Bathing platform at the water's edge",
+    src: "/photos/Hana-5693-164-master-730781.webp",
+    alt: "Private study in the master suite, opening to the coastline",
   },
 ];
 
@@ -49,7 +49,7 @@ export default function Gallery() {
         >
           Aboard
         </span>
-        <h2 className="reveal">A week, in rooms</h2>
+        <h2 className="reveal">Inside, room by room</h2>
         <p className="sub reveal">
           Saloons that hold the light, a master that opens to the coastline,
           dining that feels like a long lunch ashore.
