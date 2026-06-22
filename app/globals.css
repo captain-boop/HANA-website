@@ -326,8 +326,12 @@ em{font-style:italic; color:var(--ink)}
 /* ---------- Destinations ---------- */
 .destinations h2{margin-bottom:.6rem}
 .destinations .sub{text-align:center; color:var(--ink-soft); margin:0 auto 3rem; max-width:48ch}
-.dest-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(16px,2.4vw,28px)}
+.dest-grid{
+  display:flex; flex-wrap:wrap; justify-content:center;
+  gap:clamp(16px,2.4vw,28px);
+}
 .dest-card{
+  flex:1 1 300px; max-width:380px;
   background:rgba(255,255,255,.34);
   -webkit-backdrop-filter:blur(24px) saturate(150%);
   backdrop-filter:blur(24px) saturate(150%);
@@ -340,7 +344,7 @@ em{font-style:italic; color:var(--ink)}
 .dest-body h3{font-size:clamp(1.3rem,2.2vw,1.65rem); margin-bottom:.5rem}
 .dest-body p{font-size:.95rem; color:var(--ink-soft)}
 @media(max-width:760px){
-  .dest-grid{grid-template-columns:1fr; max-width:460px; margin:0 auto}
+  .dest-card{flex-basis:100%; max-width:460px}
 }
 
 /* ---------- Toys (image + panel) ---------- */

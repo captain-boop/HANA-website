@@ -21,6 +21,18 @@ const PLACES: Place[] = [
     src: "/photos/Hana-5693-152-platform-730769.webp",
     alt: "HANA's bathing platform at the water's edge",
   },
+  {
+    name: "Greece & the Aegean",
+    note: "The Cyclades and Ionian — Mykonos, Santorini and Corfu, then hidden bays between the islands.",
+    src: "/photos/Hana-5693-180-profile-733176-2.webp",
+    alt: "HANA seen from above, cruising clear blue Aegean water",
+  },
+  {
+    name: "Turkish Coast",
+    note: "The turquoise coast from Bodrum to Göcek — secluded gulets, pine-fringed coves and warm evenings ashore.",
+    src: "/photos/Hana-5693-133-running-730740.webp",
+    alt: "HANA cruising the Turkish turquoise coast",
+  },
 ];
 
 export default function Destinations() {
@@ -37,8 +49,9 @@ export default function Destinations() {
           Where she sails
         </h2>
         <p className="sub reveal">
-          Summer across the Western Mediterranean, an itinerary shaped around you
-          — anchorages, restaurants and timing all yours to set.
+          Summer across the Mediterranean, from the Riviera to the Aegean — an
+          itinerary shaped around you, with anchorages, restaurants and timing
+          all yours to set.
         </p>
         <div className="dest-grid reveal">
           {PLACES.map((p) => (
