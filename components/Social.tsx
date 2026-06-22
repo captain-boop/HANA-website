@@ -65,6 +65,30 @@ export default function Social() {
             </a>
           ))}
         </div>
+
+        <a
+          className="tiktok-cta reveal"
+          href={TIKTOK_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`HANA on TikTok — ${TIKTOK_HANDLE}`}
+        >
+          <span className="tiktok-cta-icon" aria-hidden="true">
+            <TikTokIcon />
+          </span>
+          <span className="tiktok-cta-text">
+            <span className="tiktok-cta-label">Off duty · TikTok</span>
+            <strong>The crew, unscripted</strong>
+            <span className="tiktok-cta-sub">
+              Galley experiments, flat-water mornings and the moments that never
+              make the brochure — the lighter side of life aboard, told by the
+              people who live it.
+            </span>
+          </span>
+          <span className="tiktok-cta-go" aria-hidden="true">
+            Watch on TikTok →
+          </span>
+        </a>
       </div>
     </section>
   );
