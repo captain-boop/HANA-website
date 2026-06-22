@@ -1,13 +1,16 @@
 import Image from "next/image";
 
 const TOYS: string[] = [
-  "Custom limousine tender",
+  "Boston Whaler 380 Outrage chase tender",
+  "Castoldi jet tender",
+  "Kawasaki SX-R stand-up jet-ski",
+  "Yamaha WaveRunner jet-ski (RYA training aboard)",
+  "Awake electric board",
+  "Fliteboard eFoil",
   "Two Seabobs",
-  "Jet-skis (RYA training aboard)",
-  "Inflatable foiling boards",
   "Paddleboards & kayaks",
   "Wakeboard & water-skis",
-  "Towable toys & sea trampoline",
+  "Towable toys",
   "Full snorkelling kit",
 ];
 

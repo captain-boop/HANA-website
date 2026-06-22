@@ -20,29 +20,48 @@ export default function Social() {
     <section className="social" id="social">
       <div className="wrap">
         <div className="social-head reveal">
-          <span className="eyebrow">Follow HANA</span>
+          <span className="eyebrow">Socials</span>
           <h2>Life aboard, as it happens</h2>
-          <div className="social-handles">
-            <a
-              className="social-handle"
-              href={INSTAGRAM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <InstagramIcon className="social-ig" />
-              <span>{INSTAGRAM_HANDLE}</span>
-            </a>
-            <a
-              className="social-handle"
-              href={TIKTOK_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <TikTokIcon className="social-ig" />
-              <span>{TIKTOK_HANDLE}</span>
-            </a>
-          </div>
+          <p className="sub">
+            Follow along on Instagram and TikTok — two windows onto the same
+            yacht.
+          </p>
         </div>
+
+        <div className="social-handles reveal">
+          <a
+            className="social-handle"
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="social-handle-icon" aria-hidden="true">
+              <InstagramIcon />
+            </span>
+            <span className="social-handle-text">
+              <strong>{INSTAGRAM_HANDLE}</strong>
+              <span>The yacht, her charters and the Mediterranean.</span>
+            </span>
+          </a>
+          <a
+            className="social-handle"
+            href={TIKTOK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="social-handle-icon" aria-hidden="true">
+              <TikTokIcon />
+            </span>
+            <span className="social-handle-text">
+              <strong>{TIKTOK_HANDLE}</strong>
+              <span>
+                The crew, unscripted — more crew-focused videos and the lighter
+                side of life aboard.
+              </span>
+            </span>
+          </a>
+        </div>
+
         <div className="social-grid reveal">
           {TILES.map((t) => (
             <a
@@ -65,30 +84,6 @@ export default function Social() {
             </a>
           ))}
         </div>
-
-        <a
-          className="tiktok-cta reveal"
-          href={TIKTOK_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={`HANA on TikTok — ${TIKTOK_HANDLE}`}
-        >
-          <span className="tiktok-cta-icon" aria-hidden="true">
-            <TikTokIcon />
-          </span>
-          <span className="tiktok-cta-text">
-            <span className="tiktok-cta-label">Off duty · TikTok</span>
-            <strong>The crew, unscripted</strong>
-            <span className="tiktok-cta-sub">
-              Galley experiments, flat-water mornings and the moments that never
-              make the brochure — the lighter side of life aboard, told by the
-              people who live it.
-            </span>
-          </span>
-          <span className="tiktok-cta-go" aria-hidden="true">
-            Watch on TikTok →
-          </span>
-        </a>
       </div>
     </section>
   );

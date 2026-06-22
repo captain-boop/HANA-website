@@ -76,10 +76,10 @@ body{
 
 /* ---------- Layout primitives ---------- */
 .wrap{max-width:var(--maxw); margin:0 auto; padding:0 clamp(20px,5vw,40px)}
-section{padding:clamp(60px,11vw,140px) 0; position:relative}
+section{padding:clamp(40px,7vw,90px) 0; position:relative}
 .eyebrow{
-  font-size:.66rem; text-transform:uppercase; letter-spacing:.32em;
-  color:var(--champagne); font-weight:400; display:block; margin-bottom:1.4rem;
+  font-size:clamp(1.7rem,3vw,2.1rem); text-transform:uppercase; letter-spacing:.16em;
+  color:var(--champagne); font-weight:400; display:block; margin-bottom:1.1rem;
 }
 h2{
   font-family:var(--font-display); font-weight:300;
@@ -160,14 +160,15 @@ em{font-style:italic; color:var(--ink)}
     radial-gradient(120% 80% at 50% 38%, rgba(28,26,23,0) 40%, rgba(28,26,23,.34) 100%);
 }
 .hero-inner{position:relative; z-index:2; display:flex; flex-direction:column; align-items:center}
-.hero .eyebrow{margin-bottom:1.8rem; color:var(--champagne-2)}
+/* the hero eyebrow is a spec caption, not a section title — keep it small */
+.hero .eyebrow{font-size:.72rem; letter-spacing:.3em; margin-bottom:1.8rem; color:var(--champagne-2)}
 .hero-wordmark{
-  width:min(560px,72vw); height:auto; display:block; margin:0 auto;
+  width:min(440px,58vw); height:auto; display:block; margin:0 auto;
   /* the logo is black; invert to a soft, warm oyster-white over the video
      (a touch of sepia + reduced brightness takes the glare off pure white) */
-  filter:brightness(0) invert(1) brightness(.94) sepia(.10) saturate(1.05);
-  -webkit-filter:brightness(0) invert(1) brightness(.94) sepia(.10) saturate(1.05);
-  opacity:.88;
+  filter:brightness(0) invert(1) brightness(.86) sepia(.12) saturate(1.05);
+  -webkit-filter:brightness(0) invert(1) brightness(.86) sepia(.12) saturate(1.05);
+  opacity:.72;
   text-shadow:0 2px 40px rgba(0,0,0,.4);
 }
 .keel{
@@ -422,17 +423,34 @@ em{font-style:italic; color:var(--ink)}
 }
 
 /* ---------- Social strip ---------- */
-.social-head{text-align:center; margin-bottom:2.6rem}
+.social-head{text-align:center; margin-bottom:2.2rem}
 .social-head h2{margin-bottom:1.2rem}
-.social-handle{
-  display:inline-flex; align-items:center; gap:.6rem;
-  font-size:.82rem; text-transform:uppercase; letter-spacing:.2em;
-  color:var(--champagne); text-decoration:none; font-weight:400;
-  transition:opacity .3s ease;
+.social-head .sub{color:var(--ink-soft); margin:0 auto; max-width:46ch}
+.social-handles{
+  display:grid; grid-template-columns:1fr 1fr; gap:clamp(14px,2vw,22px);
+  margin:0 auto 2.6rem; max-width:760px;
 }
-.social-handle:hover{opacity:.7}
-.social-handle .social-ig{width:20px; height:20px}
-.social-handles{display:flex; justify-content:center; gap:2rem; flex-wrap:wrap}
+.social-handle{
+  display:flex; align-items:flex-start; gap:1rem; text-align:left;
+  padding:clamp(18px,2.4vw,24px) clamp(20px,2.6vw,26px);
+  border-radius:18px; border:1px solid var(--glass-line);
+  background:var(--glass-2); box-shadow:var(--shadow);
+  text-decoration:none; color:var(--ink);
+  transition:transform .5s cubic-bezier(.2,.7,.2,1), border-color .35s ease;
+}
+.social-handle:hover{transform:translateY(-3px); border-color:var(--champagne-2)}
+.social-handle-icon{
+  flex:none; width:44px; height:44px; border-radius:50%;
+  display:grid; place-items:center; background:var(--ink); color:#fff;
+}
+.social-handle-icon svg{width:46%; height:46%}
+.social-handle-text{display:flex; flex-direction:column; gap:.35rem}
+.social-handle-text strong{
+  font-family:var(--font-display); font-weight:400;
+  font-size:1.05rem; letter-spacing:.02em; color:var(--ink);
+}
+.social-handle-text span{font-size:.88rem; line-height:1.5; color:var(--ink-soft)}
+@media(max-width:560px){ .social-handles{grid-template-columns:1fr} }
 .social-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:14px}
 .social-tile{
   position:relative; aspect-ratio:1/1; border-radius:18px; overflow:hidden;
@@ -447,46 +465,6 @@ em{font-style:italic; color:var(--ink)}
 .social-ig-badge svg{width:20px; height:20px}
 @media(max-width:760px){
   .social-grid{grid-template-columns:repeat(2,1fr)}
-}
-
-/* ---------- TikTok callout ---------- */
-.tiktok-cta{
-  display:flex; align-items:center; gap:clamp(18px,3vw,30px);
-  margin-top:16px; padding:clamp(22px,3.4vw,32px) clamp(24px,4vw,40px);
-  border-radius:22px; border:1px solid var(--glass-line);
-  background:var(--glass-2); box-shadow:var(--shadow);
-  text-decoration:none; color:var(--ink);
-  transition:transform .5s cubic-bezier(.2,.7,.2,1), border-color .35s ease;
-}
-.tiktok-cta:hover{transform:translateY(-3px); border-color:var(--champagne-2)}
-.tiktok-cta-icon{
-  flex:none; width:clamp(50px,7vw,62px); height:clamp(50px,7vw,62px);
-  border-radius:50%; display:grid; place-items:center;
-  background:var(--ink); color:#fff;
-}
-.tiktok-cta-icon svg{width:46%; height:46%}
-.tiktok-cta-text{display:flex; flex-direction:column; gap:.4rem; flex:1}
-.tiktok-cta-label{
-  font-size:.7rem; text-transform:uppercase; letter-spacing:.22em;
-  color:var(--champagne);
-}
-.tiktok-cta-text strong{
-  font-family:var(--font-display); font-weight:400;
-  font-size:clamp(1.2rem,2.4vw,1.55rem); line-height:1.1; color:var(--ink);
-}
-.tiktok-cta-sub{
-  font-size:.92rem; line-height:1.55; color:var(--ink-soft); max-width:52ch;
-}
-.tiktok-cta-go{
-  flex:none; align-self:center; font-size:.76rem; text-transform:uppercase;
-  letter-spacing:.16em; color:var(--champagne); white-space:nowrap;
-  transition:transform .35s ease;
-}
-.tiktok-cta:hover .tiktok-cta-go{transform:translateX(4px)}
-@media(max-width:640px){
-  .tiktok-cta{flex-direction:column; text-align:center; gap:1rem}
-  .tiktok-cta-text{align-items:center}
-  .tiktok-cta-sub{max-width:none}
 }
 
 /* ---------- Footer Instagram ---------- */
