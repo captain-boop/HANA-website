@@ -39,12 +39,6 @@ export default function Destinations() {
   return (
     <section className="destinations" id="destinations">
       <div className="wrap">
-        <span
-          className="eyebrow reveal"
-          style={{ textAlign: "center", display: "block" }}
-        >
-          Cruising Grounds
-        </span>
         <h2 className="reveal" style={{ textAlign: "center" }}>
           Where she sails
         </h2>
