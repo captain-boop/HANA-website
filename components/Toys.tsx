@@ -28,7 +28,6 @@ export default function Toys() {
             />
           </div>
           <div className="toys-panel">
-            <span className="eyebrow">The Water</span>
             <h2>Bring on the sea</h2>
             <p>
               Her beach club opens straight onto the Mediterranean, with a full

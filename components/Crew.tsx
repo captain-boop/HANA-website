@@ -173,7 +173,6 @@ export default function Crew() {
     <section className="crew" id="crew" hidden={!open}>
       <div className="wrap">
         <div className="crew-head reveal">
-          <span className="eyebrow">The Crew</span>
           <h2>A team that makes HANA her own</h2>
           <p className="sub">
             Fifteen across deck, galley and interior — discreet when you want the

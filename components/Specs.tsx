@@ -14,12 +14,6 @@ export default function Specs() {
   return (
     <section className="specs">
       <div className="wrap">
-        <span
-          className="eyebrow reveal"
-          style={{ textAlign: "center", display: "block" }}
-        >
-          Particulars
-        </span>
         <h2 className="reveal">Specifications</h2>
         <div className="dgrid reveal">
           {PARTICULARS.map((p) => (

@@ -38,8 +38,6 @@ export default function OnBoard() {
   return (
     <section className="onboard" id="onboard">
       <div className="wrap">
-        <span className="eyebrow reveal onboard-head">On Board</span>
-
         {FEATURES.map((f) => (
           <div className={`row reveal${f.reverse ? " reverse" : ""}`} key={f.num}>
             <div className="visual lift">

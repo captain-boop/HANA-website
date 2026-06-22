@@ -43,12 +43,6 @@ export default function Gallery() {
   return (
     <section className="gallery" id="gallery">
       <div className="wrap">
-        <span
-          className="eyebrow reveal"
-          style={{ textAlign: "center", display: "block" }}
-        >
-          Aboard
-        </span>
         <h2 className="reveal">Inside, room by room</h2>
         <p className="sub reveal">
           Saloons that hold the light, a master that opens to the coastline,

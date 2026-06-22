@@ -44,7 +44,6 @@ export default function Accommodation() {
     <section className="accommodation" id="accommodation">
       <div className="wrap">
         <div className="acc-head reveal">
-          <span className="eyebrow">Accommodation</span>
           <h2>Where you sleep aboard</h2>
           <p className="sub">
             HANA accommodates up to 11 guests across five ensuite cabins. The

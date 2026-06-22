@@ -10,7 +10,6 @@ export default function Enquire() {
     <section className="enquire" id="enquire">
       <div className="wrap">
         <div className="glass reveal">
-          <span className="eyebrow">Charter</span>
           <div className="price">
             From €150,000 <span>per week</span>
           </div>

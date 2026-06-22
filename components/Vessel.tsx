@@ -2,7 +2,6 @@ export default function Vessel() {
   return (
     <section className="vessel" id="vessel">
       <div className="wrap">
-        <span className="eyebrow reveal">The Vessel</span>
         <p className="lede reveal">
           A 42.6-metre CRN built in Ancona, drawn long and low and kept in
           quiet, considered order.

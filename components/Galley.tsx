@@ -38,7 +38,6 @@ export default function Galley() {
     <section className="galley" id="galley">
       <div className="wrap">
         <div className="galley-head reveal">
-          <span className="eyebrow">The Galley</span>
           <h2>A kitchen at the heart of the charter</h2>
         </div>
 

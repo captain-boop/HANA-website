@@ -20,7 +20,6 @@ export default function Social() {
     <section className="social" id="social">
       <div className="wrap">
         <div className="social-head reveal">
-          <span className="eyebrow">Socials</span>
           <h2>Life aboard, as it happens</h2>
           <p className="sub">
             Follow along on Instagram and TikTok — two windows onto the same
