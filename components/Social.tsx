@@ -1,6 +1,12 @@
 import Image from "next/image";
 import InstagramIcon from "@/components/icons/Instagram";
-import { INSTAGRAM_URL, INSTAGRAM_HANDLE } from "@/lib/social";
+import TikTokIcon from "@/components/icons/TikTok";
+import {
+  INSTAGRAM_URL,
+  INSTAGRAM_HANDLE,
+  TIKTOK_URL,
+  TIKTOK_HANDLE,
+} from "@/lib/social";
 
 const TILES: { src: string; alt: string }[] = [
   { src: "/photos/Hana-5693-140-deck-730748.webp", alt: "On deck aboard HANA" },
@@ -16,15 +22,26 @@ export default function Social() {
         <div className="social-head reveal">
           <span className="eyebrow">Follow HANA</span>
           <h2>Life aboard, as it happens</h2>
-          <a
-            className="social-handle"
-            href={INSTAGRAM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <InstagramIcon className="social-ig" />
-            <span>{INSTAGRAM_HANDLE}</span>
-          </a>
+          <div className="social-handles">
+            <a
+              className="social-handle"
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <InstagramIcon className="social-ig" />
+              <span>{INSTAGRAM_HANDLE}</span>
+            </a>
+            <a
+              className="social-handle"
+              href={TIKTOK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <TikTokIcon className="social-ig" />
+              <span>{TIKTOK_HANDLE}</span>
+            </a>
+          </div>
         </div>
         <div className="social-grid reveal">
           {TILES.map((t) => (

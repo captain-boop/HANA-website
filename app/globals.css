@@ -427,6 +427,7 @@ em{font-style:italic; color:var(--ink)}
 }
 .social-handle:hover{opacity:.7}
 .social-handle .social-ig{width:20px; height:20px}
+.social-handles{display:flex; justify-content:center; gap:2rem; flex-wrap:wrap}
 .social-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:14px}
 .social-tile{
   position:relative; aspect-ratio:1/1; border-radius:18px; overflow:hidden;

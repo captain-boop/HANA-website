@@ -1,6 +1,7 @@
 import Image from "next/image";
 import InstagramIcon from "@/components/icons/Instagram";
-import { INSTAGRAM_URL } from "@/lib/social";
+import TikTokIcon from "@/components/icons/TikTok";
+import { INSTAGRAM_URL, TIKTOK_URL } from "@/lib/social";
 
 export default function TopBar() {
   return (
@@ -36,6 +37,15 @@ export default function TopBar() {
           aria-label="HANA on Instagram"
         >
           <InstagramIcon />
+        </a>
+        <a
+          className="nav-ig"
+          href={TIKTOK_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="HANA on TikTok"
+        >
+          <TikTokIcon />
         </a>
         <a className="nav-cta" href="#enquire">
           Enquire
