@@ -17,15 +17,37 @@ const body = Jost({
   display: "swap",
 });
 
+const SITE_URL = "https://myhana.com";
+const OG_IMAGE = "/og-hana.jpg";
+const DESCRIPTION =
+  "HANA, a 42.60m CRN motor yacht. Italian craftsmanship, reimagined for the modern Mediterranean. Available for private charter — 11 guests across 5 ensuite cabins.";
+
 export const metadata: Metadata = {
-  title: "HANA — 42.6m CRN Motor Yacht · Mediterranean Charter",
-  description:
-    "HANA, a 42.60m CRN motor yacht. Italian craftsmanship, reimagined for the modern Mediterranean. Available for charter from €150,000 per week.",
+  metadataBase: new URL(SITE_URL),
+  title: "HANA — 42.6m CRN Motor Yacht | Mediterranean Charter",
+  description: DESCRIPTION,
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "HANA — 42.6m CRN Motor Yacht",
-    description:
-      "Italian craftsmanship, reimagined for the modern Mediterranean. Mediterranean charter from €150,000 per week.",
+    title: "HANA — 42.6m CRN Motor Yacht | Mediterranean Charter",
+    description: DESCRIPTION,
     type: "website",
+    url: SITE_URL,
+    siteName: "HANA",
+    locale: "en_GB",
+    images: [
+      {
+        url: OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: "HANA — 42.60m CRN motor yacht under way in the Mediterranean",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "HANA — 42.6m CRN Motor Yacht | Mediterranean Charter",
+    description: DESCRIPTION,
+    images: [OG_IMAGE],
   },
 };
 
@@ -35,6 +57,26 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+const JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "HANA — Private Yacht Charter",
+  serviceType: "Luxury motor yacht charter",
+  description: DESCRIPTION,
+  image: `${SITE_URL}${OG_IMAGE}`,
+  url: SITE_URL,
+  areaServed: {
+    "@type": "Place",
+    name: "Mediterranean",
+  },
+  provider: {
+    "@type": "Organization",
+    name: "HANA",
+    email: "captain@myhana.com",
+    url: SITE_URL,
+  },
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -42,7 +84,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en-GB" className={`${display.variable} ${body.variable} no-js`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
+        />
+      </body>
     </html>
   );
 }
