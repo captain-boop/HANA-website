@@ -14,6 +14,8 @@ type Fields = {
 
 const EMPTY: Fields = { name: "", email: "", dates: "", party: "", message: "" };
 
+const WEB3FORMS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
+
 const isEmail = (v: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
 
 export default function Enquire() {
@@ -47,13 +49,26 @@ export default function Enquire() {
 
     setStatus("sending");
     try {
-      const res = await fetch("/api/enquire", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...f, company }),
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          subject: `HANA Charter Enquiry — ${f.name}`,
+          from_name: "HANA Website",
+          name: f.name,
+          email: f.email,
+          "Preferred dates": f.dates,
+          "Party size": f.party,
+          message: f.message || "(no additional message)",
+          botcheck: company, // honeypot — Web3Forms rejects if filled
+        }),
       });
       const out = await res.json().catch(() => ({}));
-      if (res.ok && out?.ok) {
+      if (res.ok && out?.success) {
         setStatus("sent");
         setF(EMPTY);
       } else {
