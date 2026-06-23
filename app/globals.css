@@ -720,6 +720,10 @@ body:has(.subpage) .nav-toggle span{background:var(--ink); box-shadow:none}
 .enquire-form input[aria-invalid="true"],
 .enquire-form textarea[aria-invalid="true"]{border-color:#b3543e}
 .enquire-form .err{font-size:.72rem; color:#9c4631; letter-spacing:.01em}
+.enquire-form .hp-field{position:absolute; left:-9999px; width:1px; height:1px; opacity:0; pointer-events:none}
+.enquire-form .form-error{grid-column:1 / -1; margin:0; font-size:.85rem; color:#9c4631}
+.enquire-form .form-error a{color:#9c4631; text-decoration:underline}
+.enquire-form .btn:disabled{opacity:.6; pointer-events:none}
 .enquire-form .enquire-actions{grid-column:1 / -1}
 .enquire-thanks{max-width:520px; margin:1.4rem auto 0}
 .enquire-thanks h3{font-family:var(--font-display); font-weight:300; font-size:1.8rem; color:var(--ink)}

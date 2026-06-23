@@ -19,7 +19,10 @@ const isEmail = (v: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
 export default function Enquire() {
   const [f, setF] = useState<Fields>(EMPTY);
   const [errors, setErrors] = useState<Partial<Record<keyof Fields, string>>>({});
-  const [sent, setSent] = useState(false);
+  const [company, setCompany] = useState(""); // honeypot
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
+    "idle"
+  );
 
   const set =
     (k: keyof Fields) =>
@@ -38,27 +41,31 @@ export default function Enquire() {
     return Object.keys(next).length === 0;
   };
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
 
-    const body =
-      `Name: ${f.name}\n` +
-      `Email: ${f.email}\n` +
-      `Preferred dates: ${f.dates}\n` +
-      `Party size: ${f.party}\n\n` +
-      `${f.message || "I would like to enquire about chartering HANA."}\n`;
-
-    const href =
-      `mailto:${ENQUIRY_EMAIL}` +
-      "?subject=" +
-      encodeURIComponent("HANA Charter Enquiry") +
-      "&body=" +
-      encodeURIComponent(body);
-
-    window.location.href = href;
-    setSent(true);
+    setStatus("sending");
+    try {
+      const res = await fetch("/api/enquire", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...f, company }),
+      });
+      const out = await res.json().catch(() => ({}));
+      if (res.ok && out?.ok) {
+        setStatus("sent");
+        setF(EMPTY);
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
+
+  const sent = status === "sent";
+  const sending = status === "sending";
 
   return (
     <section className="enquire" id="enquire">
@@ -73,17 +80,14 @@ export default function Enquire() {
             <div className="enquire-thanks" role="status">
               <h3>Thank you</h3>
               <p>
-                Your email client should have opened with your enquiry ready to
-                send. If it didn&apos;t, write to us directly at{" "}
+                Your enquiry is on its way — we&apos;ll be in touch shortly. If
+                you&apos;d like to add anything, write to us at{" "}
                 <a href={`mailto:${ENQUIRY_EMAIL}`}>{ENQUIRY_EMAIL}</a>.
               </p>
               <button
                 type="button"
                 className="btn btn-ghost"
-                onClick={() => {
-                  setF(EMPTY);
-                  setSent(false);
-                }}
+                onClick={() => setStatus("idle")}
               >
                 Send another enquiry
               </button>
@@ -172,9 +176,28 @@ export default function Enquire() {
                 />
               </div>
 
+              <input
+                type="text"
+                name="company"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                className="hp-field"
+                value={company}
+                onChange={(e) => setCompany(e.target.value)}
+              />
+
+              {status === "error" && (
+                <p className="form-error" role="alert">
+                  Something went wrong sending your enquiry. Please try again, or
+                  email us at{" "}
+                  <a href={`mailto:${ENQUIRY_EMAIL}`}>{ENQUIRY_EMAIL}</a>.
+                </p>
+              )}
+
               <div className="enquire-actions">
-                <button type="submit" className="btn">
-                  Send enquiry
+                <button type="submit" className="btn" disabled={sending}>
+                  {sending ? "Sending…" : "Send enquiry"}
                 </button>
                 <a className="btn btn-ghost" href="/hana-brochure.pdf" download>
                   Download Brochure
