@@ -99,8 +99,13 @@ export default function Enquire() {
                   onChange={set("name")}
                   autoComplete="name"
                   aria-invalid={!!errors.name}
+                  aria-describedby={errors.name ? "enq-name-err" : undefined}
                 />
-                {errors.name && <span className="err">{errors.name}</span>}
+                {errors.name && (
+                  <span className="err" id="enq-name-err">
+                    {errors.name}
+                  </span>
+                )}
               </div>
 
               <div className="field">
@@ -112,8 +117,13 @@ export default function Enquire() {
                   onChange={set("email")}
                   autoComplete="email"
                   aria-invalid={!!errors.email}
+                  aria-describedby={errors.email ? "enq-email-err" : undefined}
                 />
-                {errors.email && <span className="err">{errors.email}</span>}
+                {errors.email && (
+                  <span className="err" id="enq-email-err">
+                    {errors.email}
+                  </span>
+                )}
               </div>
 
               <div className="field">
@@ -125,8 +135,13 @@ export default function Enquire() {
                   value={f.dates}
                   onChange={set("dates")}
                   aria-invalid={!!errors.dates}
+                  aria-describedby={errors.dates ? "enq-dates-err" : undefined}
                 />
-                {errors.dates && <span className="err">{errors.dates}</span>}
+                {errors.dates && (
+                  <span className="err" id="enq-dates-err">
+                    {errors.dates}
+                  </span>
+                )}
               </div>
 
               <div className="field">
@@ -138,8 +153,13 @@ export default function Enquire() {
                   value={f.party}
                   onChange={set("party")}
                   aria-invalid={!!errors.party}
+                  aria-describedby={errors.party ? "enq-party-err" : undefined}
                 />
-                {errors.party && <span className="err">{errors.party}</span>}
+                {errors.party && (
+                  <span className="err" id="enq-party-err">
+                    {errors.party}
+                  </span>
+                )}
               </div>
 
               <div className="field field-wide">
