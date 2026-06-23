@@ -29,7 +29,7 @@ export default function TopBar() {
 
   return (
     <header className="topbar" id="topbar">
-      <a className="brand" href="#top" aria-label="HANA — home" onClick={close}>
+      <a className="brand" href="/" aria-label="HANA — home" onClick={close}>
         <Image
           src="/hana-logo.png"
           alt="HANA"
