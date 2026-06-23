@@ -3,12 +3,11 @@ import TopBar from "@/components/TopBar";
 import Hero from "@/components/Hero";
 import SpecsStrip from "@/components/SpecsStrip";
 import Vessel from "@/components/Vessel";
+import Gallery from "@/components/Gallery";
 import OnBoard from "@/components/OnBoard";
+import Toys from "@/components/Toys";
 import Accommodation from "@/components/Accommodation";
 import Destinations from "@/components/Destinations";
-import Toys from "@/components/Toys";
-import Gallery from "@/components/Gallery";
-import Crew from "@/components/Crew";
 import Galley from "@/components/Galley";
 import Social from "@/components/Social";
 import Specs from "@/components/Specs";
@@ -25,12 +24,11 @@ export default function Home() {
         <Hero />
         <SpecsStrip />
         <Vessel />
+        <Gallery />
         <OnBoard />
+        <Toys />
         <Accommodation />
         <Destinations />
-        <Toys />
-        <Gallery />
-        <Crew />
         <Galley />
         <Social />
         <Specs />

@@ -25,13 +25,6 @@ const FEATURES: Feature[] = [
     alt: "HANA's sea-level gym with a window opening onto the water",
     reverse: true,
   },
-  {
-    num: "03",
-    title: "Toys & Water",
-    body: "A wide-ranging collection for every mood of the sea — including RYA-certified jet-ski training for guests who would rather learn properly than simply ride.",
-    src: "/photos/Hana-5693-138-profile-730745.webp",
-    alt: "A guest foiling beside HANA at anchor",
-  },
 ];
 
 export default function OnBoard() {

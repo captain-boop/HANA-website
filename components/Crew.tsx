@@ -1,7 +1,4 @@
-"use client";
-
 import Image from "next/image";
-import { useEffect, useState } from "react";
 
 type Member = {
   name: string;
@@ -152,25 +149,8 @@ const CREW: Member[] = [
 ];
 
 export default function Crew() {
-  // The crew section is gated behind the "Crew" nav tab: hidden on the
-  // landing page and revealed only when the URL hash points at it.
-  const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    const sync = () => setOpen(window.location.hash === "#crew");
-    sync();
-    window.addEventListener("hashchange", sync);
-    return () => window.removeEventListener("hashchange", sync);
-  }, []);
-
-  useEffect(() => {
-    if (open) {
-      document.getElementById("crew")?.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [open]);
-
   return (
-    <section className="crew" id="crew" hidden={!open}>
+    <section className="crew" id="crew">
       <div className="wrap">
         <div className="crew-head reveal">
           <h2>A team that makes HANA her own</h2>

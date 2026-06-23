@@ -7,12 +7,12 @@ import TikTokIcon from "@/components/icons/TikTok";
 import { INSTAGRAM_URL, TIKTOK_URL } from "@/lib/social";
 
 const LINKS: [string, string][] = [
-  ["#onboard", "On Board"],
-  ["#accommodation", "Cabins"],
-  ["#destinations", "Destinations"],
-  ["#gallery", "Gallery"],
-  ["#crew", "Crew"],
-  ["#galley", "Chef"],
+  ["/#gallery", "Gallery"],
+  ["/#onboard", "On Board"],
+  ["/#accommodation", "Cabins"],
+  ["/#destinations", "Destinations"],
+  ["/#galley", "Chef"],
+  ["/crew", "Crew"],
 ];
 
 export default function TopBar() {
@@ -67,7 +67,7 @@ export default function TopBar() {
         >
           <TikTokIcon />
         </a>
-        <a className="nav-cta" href="#enquire">
+        <a className="nav-cta" href="/#enquire">
           Enquire
         </a>
 
@@ -99,7 +99,7 @@ export default function TopBar() {
           <a href="/hana-brochure.pdf" download onClick={close}>
             Brochure
           </a>
-          <a className="mobile-cta" href="#enquire" onClick={close}>
+          <a className="mobile-cta" href="/#enquire" onClick={close}>
             Enquire
           </a>
           <div className="mobile-social">

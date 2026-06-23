@@ -12,9 +12,12 @@ const PARTICULARS = [
 
 export default function Specs() {
   return (
-    <section className="specs">
+    <section className="specs" id="specs">
       <div className="wrap">
-        <h2 className="reveal">Specifications</h2>
+        <h2 className="reveal">Details &amp; downloads</h2>
+        <p className="sub reveal">
+          The full particulars, and a brochure to take away.
+        </p>
         <div className="dgrid reveal">
           {PARTICULARS.map((p) => (
             <div className="dcell" key={p.l}>
@@ -22,6 +25,11 @@ export default function Specs() {
               <div className="v">{p.v}</div>
             </div>
           ))}
+        </div>
+        <div className="specs-download reveal">
+          <a className="btn btn-ghost" href="/hana-brochure.pdf" download>
+            Download Brochure
+          </a>
         </div>
       </div>
     </section>

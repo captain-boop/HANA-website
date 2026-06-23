@@ -348,7 +348,9 @@ em{font-style:italic; color:var(--ink)}
 }
 
 /* ---------- Specifications grid ---------- */
-.specs h2{text-align:center; margin-bottom:3rem}
+.specs h2{text-align:center; margin-bottom:.6rem}
+.specs .sub{text-align:center; color:var(--ink-soft); margin:0 auto 3rem; max-width:46ch}
+.specs-download{display:flex; justify-content:center; margin-top:2.2rem}
 .dgrid{
   display:grid; grid-template-columns:repeat(3,1fr);
   border:1px solid var(--glass-line); border-radius:24px; overflow:hidden;
@@ -486,6 +488,21 @@ em{font-style:italic; color:var(--ink)}
   .acc-master-img{min-height:280px}
 }
 @media(max-width:480px){ .acc-grid{grid-template-columns:1fr; max-width:420px; margin:0 auto} }
+
+/* ---------- Sub-pages (e.g. /crew) ---------- */
+/* No hero band on sub-pages, so give clearance under the fixed bar and
+   force the legible (condensed) top-bar treatment over the light field. */
+.subpage{padding-top:clamp(90px,12vh,130px)}
+body:has(.subpage) .topbar{
+  background:rgba(255,255,255,.5);
+  -webkit-backdrop-filter:blur(20px) saturate(150%);
+  backdrop-filter:blur(20px) saturate(150%);
+  box-shadow:0 1px 0 var(--glass-line), 0 18px 40px -30px rgba(44,41,37,.5);
+}
+body:has(.subpage) .topbar .brand img{filter:none; -webkit-filter:none}
+body:has(.subpage) .topbar nav a{color:var(--ink); text-shadow:none}
+body:has(.subpage) .topbar nav a.nav-cta{border-color:var(--champagne); color:var(--champagne)}
+body:has(.subpage) .nav-toggle span{background:var(--ink); box-shadow:none}
 
 /* ---------- Crew (profile grid) ---------- */
 .crew-head{text-align:center; margin-bottom:clamp(1.8rem,3vw,2.6rem)}
