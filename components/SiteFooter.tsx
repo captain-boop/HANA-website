@@ -41,7 +41,17 @@ export default function SiteFooter() {
         <TikTokIcon className="footer-ig-icon" />
         <span>{TIKTOK_HANDLE}</span>
       </a>
-      <div className="meta">42.60m CRN · Mediterranean Charter</div>
+      <a className="footer-contact" href="mailto:captain@myhana.com">
+        captain@myhana.com
+      </a>
+      <nav className="footer-legal">
+        <a href="/terms">Terms</a>
+        <span aria-hidden="true">·</span>
+        <a href="/privacy">Privacy</a>
+      </nav>
+      <div className="meta">
+        © {new Date().getFullYear()} HANA · 42.60m CRN · Mediterranean Charter
+      </div>
     </footer>
   );
 }

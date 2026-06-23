@@ -8,7 +8,11 @@ import OnBoard from "@/components/OnBoard";
 import Toys from "@/components/Toys";
 import Accommodation from "@/components/Accommodation";
 import Destinations from "@/components/Destinations";
+import WhyHana from "@/components/WhyHana";
+import Itinerary from "@/components/Itinerary";
 import Galley from "@/components/Galley";
+import CrewTease from "@/components/CrewTease";
+import Testimonials from "@/components/Testimonials";
 import Social from "@/components/Social";
 import Specs from "@/components/Specs";
 import Enquire from "@/components/Enquire";
@@ -29,7 +33,11 @@ export default function Home() {
         <Toys />
         <Accommodation />
         <Destinations />
+        <WhyHana />
+        <Itinerary />
         <Galley />
+        <CrewTease />
+        <Testimonials />
         <Social />
         <Specs />
         <Enquire />
