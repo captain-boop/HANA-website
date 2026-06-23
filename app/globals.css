@@ -801,7 +801,7 @@ body:has(.subpage) .nav-toggle span{background:var(--ink); box-shadow:none}
   box-shadow:var(--shadow);
 }
 .crew-tease-img{position:relative; min-height:320px; align-self:stretch}
-.crew-tease-img img{object-fit:cover}
+.crew-tease-img img{object-fit:cover; object-position:50% 22%}
 .crew-tease-body{padding:clamp(28px,4vw,48px) clamp(28px,4vw,48px) clamp(28px,4vw,48px) 0}
 .crew-tease-body h2{margin-bottom:1rem}
 .crew-tease-body p{color:var(--ink-soft); margin-bottom:1.8rem; max-width:46ch}
