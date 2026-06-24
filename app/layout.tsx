@@ -17,7 +17,7 @@ const body = Jost({
   display: "swap",
 });
 
-const SITE_URL = "https://myhana.com";
+const SITE_URL = "https://motoryachthana.com";
 const OG_IMAGE = "/og-hana.jpg";
 const DESCRIPTION =
   "HANA, a 42.60m CRN motor yacht. Italian craftsmanship, reimagined for the modern Mediterranean. Available for private charter — 11 guests across 5 ensuite cabins.";
