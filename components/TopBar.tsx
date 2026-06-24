@@ -28,8 +28,9 @@ export default function TopBar() {
   const close = () => setOpen(false);
 
   return (
-    <header className="topbar" id="topbar">
-      <a className="brand" href="/" aria-label="HANA — home" onClick={close}>
+    <>
+      <header className="topbar" id="topbar">
+        <a className="brand" href="/" aria-label="HANA — home" onClick={close}>
         <Image
           src="/hana-logo.png"
           alt="HANA"
@@ -84,6 +85,7 @@ export default function TopBar() {
           <span />
         </button>
       </nav>
+      </header>
 
       <div
         id="mobile-menu"
@@ -122,6 +124,6 @@ export default function TopBar() {
           </div>
         </nav>
       </div>
-    </header>
+    </>
   );
 }
