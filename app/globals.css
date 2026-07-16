@@ -178,7 +178,7 @@ em{font-style:italic; color:var(--ink)}
 .mobile-menu .mobile-social a{color:var(--ink); line-height:0; opacity:1}
 .mobile-menu .mobile-social svg{width:22px; height:22px}
 
-@media(max-width:680px){
+@media(max-width:1024px){
   .nav-hide{display:none}
   .topbar nav a.nav-ig,.topbar nav a.nav-cta{display:none}
   .nav-toggle{display:block}
@@ -670,8 +670,12 @@ body:has(.subpage) .nav-toggle span{background:var(--ink); box-shadow:none}
 }
 
 /* ---------- Footer Instagram ---------- */
+.footer-social{
+  display:flex; flex-wrap:wrap; align-items:center; justify-content:center;
+  gap:.6rem 1.8rem; margin-top:1.6rem;
+}
 .footer-ig{
-  display:inline-flex; align-items:center; gap:.5rem; margin-top:1.6rem;
+  display:inline-flex; align-items:center; gap:.5rem;
   font-size:.74rem; text-transform:uppercase; letter-spacing:.2em;
   color:var(--champagne); text-decoration:none; transition:opacity .3s ease;
 }
@@ -838,7 +842,7 @@ footer .line{
   font-size:1.15rem; color:var(--ink);
 }
 footer .footer-contact{
-  display:inline-block; margin-top:1.6rem; color:var(--champagne);
+  display:inline-block; color:var(--champagne);
   font-size:.85rem; letter-spacing:.04em; text-decoration:none;
 }
 footer .footer-contact:hover{text-decoration:underline}

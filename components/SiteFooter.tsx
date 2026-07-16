@@ -23,27 +23,29 @@ export default function SiteFooter() {
       <div className="line">
         Italian craftsmanship, reimagined for the modern Mediterranean.
       </div>
-      <a
-        className="footer-ig"
-        href={INSTAGRAM_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <InstagramIcon className="footer-ig-icon" />
-        <span>{INSTAGRAM_HANDLE}</span>
-      </a>
-      <a
-        className="footer-ig"
-        href={TIKTOK_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <TikTokIcon className="footer-ig-icon" />
-        <span>{TIKTOK_HANDLE}</span>
-      </a>
-      <a className="footer-contact" href="mailto:captain@myhana.com">
-        captain@myhana.com
-      </a>
+      <div className="footer-social">
+        <a
+          className="footer-ig"
+          href={INSTAGRAM_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <InstagramIcon className="footer-ig-icon" />
+          <span>{INSTAGRAM_HANDLE}</span>
+        </a>
+        <a
+          className="footer-ig"
+          href={TIKTOK_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <TikTokIcon className="footer-ig-icon" />
+          <span>{TIKTOK_HANDLE}</span>
+        </a>
+        <a className="footer-contact" href="mailto:captain@myhana.com">
+          captain@myhana.com
+        </a>
+      </div>
       <nav className="footer-legal">
         <a href="/terms">Terms</a>
         <span aria-hidden="true">·</span>
