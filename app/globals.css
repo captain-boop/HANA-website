@@ -400,6 +400,37 @@ em{font-style:italic; color:var(--ink)}
   .dest-card{flex-basis:100%; max-width:460px}
 }
 
+/* ---------- Decks (photo cards) ---------- */
+.decks h2{text-align:center; margin-bottom:.6rem}
+.decks .sub{text-align:center; color:var(--ink-soft); margin:0 auto 3rem; max-width:48ch}
+.deck-grid{
+  display:flex; flex-wrap:wrap; justify-content:center;
+  gap:clamp(14px,1.8vw,22px);
+}
+.deck-card{
+  flex:1 1 190px; max-width:250px;
+  background:rgba(255,255,255,.34);
+  -webkit-backdrop-filter:blur(24px) saturate(150%);
+  backdrop-filter:blur(24px) saturate(150%);
+  border:1px solid var(--glass-line); border-radius:20px; overflow:hidden;
+  box-shadow:var(--shadow); display:flex; flex-direction:column;
+}
+.deck-img{position:relative; aspect-ratio:4/3}
+.deck-img img{object-fit:cover}
+.deck-body{padding:clamp(16px,1.6vw,20px); display:flex; flex-direction:column; flex:1}
+.deck-num{
+  font-size:.62rem; letter-spacing:.28em; color:var(--champagne);
+  margin-bottom:.35rem;
+}
+.deck-body h3{font-size:clamp(1.2rem,1.8vw,1.45rem); margin-bottom:.4rem}
+.deck-body p{font-size:.84rem; line-height:1.6; color:var(--ink-soft)}
+@media(max-width:1000px){
+  .deck-card{flex-basis:280px; max-width:340px}
+}
+@media(max-width:600px){
+  .deck-card{flex-basis:100%; max-width:440px}
+}
+
 /* ---------- Toys (image + panel) ---------- */
 .toys-row{
   display:grid; grid-template-columns:1fr 1fr; gap:clamp(24px,4vw,56px);
