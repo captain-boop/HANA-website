@@ -6,6 +6,7 @@ import Vessel from "@/components/Vessel";
 import Gallery from "@/components/Gallery";
 import OnBoard from "@/components/OnBoard";
 import Decks from "@/components/Decks";
+import StepAboard from "@/components/StepAboard";
 import Toys from "@/components/Toys";
 import Accommodation from "@/components/Accommodation";
 import Destinations from "@/components/Destinations";
@@ -32,6 +33,7 @@ export default function Home() {
         <Gallery />
         <OnBoard />
         <Decks />
+        <StepAboard />
         <Toys />
         <Accommodation />
         <Destinations />
