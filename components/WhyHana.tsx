@@ -17,7 +17,7 @@ const REASONS = [
   },
   {
     t: "A crew who know her",
-    b: "Fifteen across deck, galley and interior, led by rotational captains who know every metre of her. Service that anticipates rather than reacts.",
+    b: "Fourteen across deck, galley and interior, led by rotational captains who know every metre of her. Service that anticipates rather than reacts.",
   },
   {
     t: "Built for families",

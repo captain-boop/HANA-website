@@ -8,7 +8,7 @@ import ScrollEffects from "@/components/ScrollEffects";
 export const metadata: Metadata = {
   title: "The Crew — HANA | Mediterranean Charter",
   description:
-    "Meet HANA's crew — fifteen across deck, galley and interior, led by rotational captains who know her intimately.",
+    "Meet HANA's crew — fourteen across deck, galley and interior, led by rotational captains who know her intimately.",
   alternates: { canonical: "/crew" },
 };
 

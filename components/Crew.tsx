@@ -137,15 +137,6 @@ const CREW: Member[] = [
     hobbies: "Padel, hiking, training",
     bio: "From Blouberg, Devan grew up bodyboarding, sailing and fishing off his father's yacht. He joined HANA in October 2025, bringing a steady, hands-on approach and an easy readiness to help wherever needed.",
   },
-  {
-    name: "Kristofer Ennok",
-    role: "Chase Boat Captain",
-    nationality: "Estonian",
-    src: "/photos/crew/kristofer-ennok.jpg",
-    languages: "Estonian, English, Russian",
-    hobbies: "Travel, gym, classic cars",
-    bio: "Raised in Pärnu, Estonia, Kristofer was racing dinghies by seven and diving by ten. He's worked the world's largest sailing yachts — Obsidian, EOS — and served as a rescue swimmer with the Estonian Navy.",
-  },
 ];
 
 export default function Crew() {
@@ -155,7 +146,7 @@ export default function Crew() {
         <div className="crew-head reveal">
           <h2>A team that makes HANA her own</h2>
           <p className="sub">
-            Fifteen across deck, galley and interior — discreet when you want the
+            Fourteen across deck, galley and interior — discreet when you want the
             day to yourselves, ready the moment you don't.
           </p>
         </div>

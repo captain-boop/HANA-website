@@ -16,7 +16,7 @@ export default function CrewTease() {
           <div className="crew-tease-body">
             <h2>The crew</h2>
             <p>
-              Fifteen across deck, galley and interior, led by rotational
+              Fourteen across deck, galley and interior, led by rotational
               captains who know her intimately — discreet when you want the day
               to yourselves, ready the moment you don&apos;t.
             </p>
